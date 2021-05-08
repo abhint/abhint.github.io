@@ -134,7 +134,7 @@ body {
 @media (max-width: 800px) {
     #profile {
         width: 90vw;
-        padding: 4vh 5vw;
+        padding: 5vh 5vw 0vh;
         height: 60vh;
         text-align: center;
         position: relative;
@@ -150,7 +150,7 @@ body {
     }
     #card {
         width: 90vw;
-        padding: 4vh 5vw;
+        padding: 0vh 5vw 5vh;
         height: auto;
         display: inline-block;
         padding-left: 5vw;
@@ -163,7 +163,9 @@ body {
         display: block;
         border-radius: 1ch;
     }
-    /* #hello_world {
-        margin: 0px;
-    } */
+    .terminal-body span{
+        color: #3CFF00;
+        font-weight: bold;
+        font-size: smaller;
+    }
 }
