@@ -6,10 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/typed.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="js/typed.js" type="text/javascript"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/25699289?v=4" type="image/x-icon">
     <title>ABHIJITH N T</title>
+    <!-- Typed.js Script -->
+    <script>
+        $(function () {
+            $("#typed").typed({
+                strings: ["Python3", "node", "Happy Coding !", " Thank you for visit my website"],
+                typeSpeed: 30,
+                callback: function () {
+                    shift();
+                }
+            });
+
+        });
+
+        function shift() {
+            $(".head-wrap").addClass("shift-text");
+            terminalHeight();
+        }
+
+        function terminalHeight() {
+            var termHeight = $(".terminal-height");
+            var value = termHeight.text();
+            value = parseInt(value);
+            setTimeout(function () {
+                if (value > 10) {
+                    value = value - 1;
+                    this.txtValue = value.toString();
+                    termHeight.text(this.txtValue);
+                    self.terminalHeight();
+                } else {
+                    clearTimeout();
+                }
+            }, 10);
+        }
+    </script>
+    <!-- Typed.js End -->
 </head>
 
 <body>
@@ -61,12 +100,11 @@
         <div class="terminal">
             <div class="terminal-bar">Abhijith: ~/Desktop</div>
             <div class="terminal-body">
-                <span>Abhijith:~$ Python3</span>
-
+                <span id="typed">Abhijith:~$ </span>
+                <span class="terminal-cursor">|</span>
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
