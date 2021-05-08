@@ -92,6 +92,11 @@ body {
     margin: 2vh 0px;
     padding: 4vh 0px !important;
 }
+#hello_world span{
+    text-align: center;
+    display: block;
+    font-size: 32pt;
+}
 
 /* .terminal {
     margin-left: -15px;
@@ -100,6 +105,30 @@ body {
 #hello_world h1 {
     display: block;
     text-align: center;
+}
+
+.terminal{
+    margin: auto;
+    width: 80ch;
+    height: 24ch;
+    overflow: hidden;
+    display: Sblock;
+    border-radius: 1ch;
+}
+.terminal-bar{
+    padding: 15px 0;
+    background-color: #2E3436;
+    text-align: center;
+}
+.terminal-body{
+    padding-bottom: 24ch;
+    background-color: #000000;
+    opacity: 0px;
+    text-align: left;
+}
+.terminal-body span{
+    color: #3CFF00;
+    font-weight: bold;
 }
 
 @media (max-width: 800px) {
@@ -125,6 +154,14 @@ body {
         height: auto;
         display: inline-block;
         padding-left: 5vw;
+    }
+    .terminal{
+        margin: auto;
+        width: 30ch;
+        height: 15ch;
+        overflow: hidden;
+        display: block;
+        border-radius: 1ch;
     }
     /* #hello_world {
         margin: 0px;
