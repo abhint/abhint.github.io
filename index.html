@@ -1,127 +1,706 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/typed.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <script src="js/typed.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/25699289?v=4" type="image/x-icon">
-    <title>ABHIJITH N T</title>
-    <!-- Typed.js Script -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Abhijith N T – Finance Professional & Developer</title>
+    <meta name="description" content="Senior Executive at Bajaj Finance. Working in finance, coding for fun. Interested in Python, JavaScript, Go, PHP, and SQL.">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="color-scheme" content="dark light">
+    <meta name="canonical" href="https://abhint.is-a.dev/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Abhijith N T – Finance Professional & Developer">
+    <meta property="og:description" content="Senior Executive at Bajaj Finance. Working in finance, coding for fun.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abhint.is-a.dev/">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/25699289?v=4">
+    <meta property="og:image:alt" content="Abhijith N T">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/25699289?v=4" type="image/png">
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/25699289?v=4" type="image/png">
+    
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --bg-secondary: #1a1a1a;
+            --bg-tertiary: #242424;
+            --text: #ffffff;
+            --text-secondary: #b0b0b0;
+            --text-tertiary: #808080;
+            --accent: #3cff00;
+            --accent-muted: #2aaa00;
+            --border: #333333;
+            --shadow: rgba(0, 0, 0, 0.5);
+            --transition: all 200ms ease-out;
+            font-synthesis: none;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg: #ffffff;
+                --bg-secondary: #f5f5f5;
+                --bg-tertiary: #efefef;
+                --text: #1a1a1a;
+                --text-secondary: #555555;
+                --text-tertiary: #888888;
+                --accent: #0084ff;
+                --accent-muted: #0066cc;
+                --border: #e0e0e0;
+                --shadow: rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            font-size: 16px;
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: var(--transition);
+            outline-offset: 2px;
+        }
+
+        a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        a:focus-visible {
+            outline: 2px solid var(--accent);
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .nav-brand {
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            color: var(--accent);
+        }
+
+        @media (max-width: 640px) {
+            .nav-links {
+                gap: 1rem;
+            }
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            max-width: 65ch;
+            line-height: 1.7;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero-content h1 {
+            margin-top: 0;
+        }
+
+        .hero-tagline {
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .hero-image {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 2px solid var(--border);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .about-item {
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            transition: var(--transition);
+        }
+
+        .about-item:hover {
+            border-color: var(--accent);
+            background: var(--bg-tertiary);
+        }
+
+        .tech-interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            padding: 0.4rem 0.75rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--accent-muted);
+            color: var(--accent);
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.25rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            border-color: var(--accent);
+            background: var(--bg-tertiary);
+            color: var(--accent);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+            height: 100%;
+            min-height: 200px;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            background: var(--bg-tertiary);
+            transform: translateY(-2px);
+        }
+
+        .project-card:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .project-name {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .project-description {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            flex-grow: 1;
+            line-height: 1.5;
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-top: auto;
+        }
+
+        .project-lang {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background: var(--bg-tertiary);
+            border-radius: 3px;
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            font-weight: 500;
+        }
+
+        .load-more {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .load-more:hover,
+        .load-more:focus-visible {
+            background: var(--accent);
+            color: var(--bg);
+        }
+
+        .load-more:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--text-tertiary);
+            font-size: 0.85rem;
+            margin-top: 3rem;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            color: var(--text-secondary);
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .social-icon:hover,
+        .social-icon:focus-visible {
+            color: var(--accent);
+            border-color: var(--accent);
+            background: var(--bg-tertiary);
+        }
+
+        .divider {
+            height: 1px;
+            background: var(--border);
+            margin: 1.5rem 0;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+        }
+
+        .error-message {
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            grid-column: 1 / -1;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .hero-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            main {
+                padding: 1.5rem 0;
+            }
+
+            section {
+                margin-bottom: 2.5rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="sr-only">Skip to main content</a>
+    
+    <header>
+        <nav class="container">
+            <div class="nav-brand">@abhint</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Abhijith N T</h1>
+                <p class="hero-tagline">Working in finance, coding for fun</p>
+                <p>I'm a Senior Executive at <strong>Bajaj Finance</strong> managing Debt Management Services for consumers. In my free time, I explore programming, experiment with new technologies, and build personal projects.</p>
+                <p>Currently interested in <strong>Python</strong>, <strong>JavaScript</strong>, <strong>Go</strong>, <strong>PHP</strong>, and <strong>SQL</strong>.</p>
+            </div>
+            <img src="https://avatars.githubusercontent.com/u/25699289?v=4" alt="Abhijith N T" class="hero-image" width="160" height="160" decoding="async">
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About</h2>
+            <div class="about-grid">
+                <div class="about-item">
+                    <h3>Professional</h3>
+                    <p>Senior Executive managing debt management services for consumers at Bajaj Finance. Focused on process optimization and delivering value in the fintech space.</p>
+                </div>
+                <div class="about-item">
+                    <h3>Developer</h3>
+                    <p>Self-taught programmer who enjoys exploring different languages, paradigms, and tools. I build projects to learn and solve problems, from CLI utilities to web applications.</p>
+                </div>
+                <div class="about-item">
+                    <h3>Technology Interests</h3>
+                    <div class="tech-interests">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Go</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">SQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <p>A selection of projects from my <a href="https://github.com/abhint" target="_blank" rel="noopener noreferrer">GitHub</a>. Click any project to view the source.</p>
+            <div id="projects-container" class="projects-grid">
+                <div class="loading">Loading projects...</div>
+            </div>
+            <div id="load-more-container" style="text-align: center; margin-top: 1.5rem;"></div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <p>Reach out via email or connect on social platforms.</p>
+            <div class="contact-links">
+                <a href="mailto:notifyabhijith@gmail.com" class="contact-link">Email</a>
+                <a href="https://github.com/abhint" target="_blank" rel="noopener noreferrer" class="contact-link">GitHub</a>
+                <a href="https://twitter.com/abhint6" target="_blank" rel="noopener noreferrer" class="contact-link">Twitter</a>
+                <a href="https://instagram.com/abhint6" target="_blank" rel="noopener noreferrer" class="contact-link">Instagram</a>
+                <a href="https://telegram.me/abhint" target="_blank" rel="noopener noreferrer" class="contact-link">Telegram</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://github.com/abhint" target="_blank" rel="noopener noreferrer" title="GitHub" class="social-icon">GH</a>
+            <a href="https://twitter.com/abhint6" target="_blank" rel="noopener noreferrer" title="Twitter" class="social-icon">𝕿</a>
+            <a href="https://instagram.com/abhint6" target="_blank" rel="noopener noreferrer" title="Instagram" class="social-icon">📷</a>
+            <a href="https://telegram.me/abhint" target="_blank" rel="noopener noreferrer" title="Telegram" class="social-icon">✉</a>
+        </div>
+        <div class="divider"></div>
+        <p>&copy; 2024 Abhijith N T. Built with semantic HTML and vanilla CSS. Based in Kerala, India.</p>
+    </footer>
+
     <script>
-        $(function () {
-            $("#typed").typed({
-                strings: [`console.log("Hello, World!");`, `Hello, World!`, `print("Hello, World!")`, `Hello, World!`],
-                typeSpeed: 30,
-                callback: function () {
-                    shift();
+        // Configuration for featured projects
+        const FEATURED_PROJECTS = [
+            'linkee',
+            'strandom',
+            'Telegram-URL-Upload',
+            'manglish-typing'
+        ];
+        
+        let allRepos = [];
+        let displayCount = 4;
+        const projectsContainer = document.getElementById('projects-container');
+        const loadMoreContainer = document.getElementById('load-more-container');
+        
+        async function fetchProjects() {
+            try {
+                // Fetch repositories from GitHub API
+                const response = await fetch('https://api.github.com/users/abhint/repos?per_page=100&sort=updated&direction=desc');
+                
+                if (!response.ok) throw new Error('Failed to fetch repositories');
+                
+                const repos = await response.json();
+                
+                // Filter: prioritize featured projects, then filter by description
+                const featured = repos.filter(r => FEATURED_PROJECTS.includes(r.name));
+                const others = repos.filter(r => 
+                    !FEATURED_PROJECTS.includes(r.name) && 
+                    r.description && 
+                    !r.archived && 
+                    r.stargazers_count >= 0
+                );
+                
+                allRepos = [...featured, ...others].slice(0, 30); // Cap at 30 to avoid too many API results
+                
+                renderProjects(0, displayCount);
+                updateLoadMoreButton();
+            } catch (error) {
+                console.error('Error fetching projects:', error);
+                projectsContainer.innerHTML = `
+                    <div class="error-message">
+                        <p><strong>Unable to load projects at the moment.</strong></p>
+                        <p>Visit <a href="https://github.com/abhint" target="_blank" rel="noopener noreferrer">my GitHub profile</a> to see all projects.</p>
+                    </div>
+                `;
+            }
+        }
+        
+        function renderProjects(start, end) {
+            const repos = allRepos.slice(start, end);
+            
+            if (start === 0) {
+                projectsContainer.innerHTML = '';
+            }
+            
+            repos.forEach(repo => {
+                const card = createProjectCard(repo);
+                projectsContainer.appendChild(card);
+            });
+        }
+        
+        function createProjectCard(repo) {
+            const card = document.createElement('a');
+            card.href = repo.html_url;
+            card.target = '_blank';
+            card.rel = 'noopener noreferrer';
+            card.className = 'project-card';
+            
+            const desc = repo.description || 'No description';
+            const truncated = desc.length > 120 ? desc.substring(0, 117) + '…' : desc;
+            
+            let metaHTML = '';
+            if (repo.language) {
+                metaHTML += `<span class="project-lang">${escapeHtml(repo.language)}</span>`;
+            }
+            if (repo.stargazers_count > 0) {
+                metaHTML += `<span class="project-lang">⭐ ${repo.stargazers_count}</span>`;
+            }
+            
+            card.innerHTML = `
+                <div class="project-name">${escapeHtml(repo.name)}</div>
+                <div class="project-description">${escapeHtml(truncated)}</div>
+                <div class="project-meta">${metaHTML}</div>
+            `;
+            
+            return card;
+        }
+        
+        function updateLoadMoreButton() {
+            loadMoreContainer.innerHTML = '';
+            if (displayCount < allRepos.length) {
+                const btn = document.createElement('button');
+                btn.className = 'load-more';
+                const remaining = allRepos.length - displayCount;
+                btn.textContent = `Load ${Math.min(remaining, 4)} More`;
+                btn.addEventListener('click', () => {
+                    const newDisplay = Math.min(displayCount + 4, allRepos.length);
+                    renderProjects(displayCount, newDisplay);
+                    displayCount = newDisplay;
+                    updateLoadMoreButton();
+                });
+                loadMoreContainer.appendChild(btn);
+            }
+        }
+        
+        function escapeHtml(text) {
+            const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    target.focus({ preventScroll: true });
                 }
             });
-
         });
-
-        function shift() {
-            $(".head-wrap").addClass("shift-text");
-            terminalHeight();
-        }
-
-        function terminalHeight() {
-            var termHeight = $(".terminal-height");
-            var value = termHeight.text();
-            value = parseInt(value);
-            setTimeout(function () {
-                if (value > 10) {
-                    value = value - 1;
-                    this.txtValue = value.toString();
-                    termHeight.text(this.txtValue);
-                    self.terminalHeight();
-                } else {
-                    clearTimeout();
-                }
-            }, 10);
+        
+        // Load projects when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', fetchProjects);
+        } else {
+            fetchProjects();
         }
     </script>
-    <!-- Typed.js End -->
-
-</head>
-
-<body>
-    
-<!--  ko-fi    -->
-    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-<script>
-  kofiWidgetOverlay.draw('abhint', {
-    'type': 'floating-chat',
-    'floating-chat.donateButton.text': 'Support me',
-    'floating-chat.donateButton.background-color': '#00b9fe',
-    'floating-chat.donateButton.text-color': '#fff'
-  });
-</script>
-<!--   ko-fi   -->
-    
-    <!-- Right Container -->
-    <div id="profile">
-        <!-- Profile -->
-        <div id="profile_picture" style="background: url(https://avatars.githubusercontent.com/u/25699289?v=4) center;">
-        </div>
-        <div id="name">
-            <span style="display: block;">ABHIJITH N T</span>
-            <a href="https://github.com/abhint">@abhint</a>
-        </div>
-        <div id="me">
-            <span style="display: block;">
-                <i class="fas fa-map-marker-alt"></i> Kerala, Kottayam
-            </span>
-            <span style="display: block;">
-                <i class="far fa-envelope"></i> <a href="mailto:notifyabhijith@gmail.com">notifyabhijith@gmail.com
-                </a></span>
-            <!-- Social Links -->
-            <div class="socials_link">
-                <span><a href="https://www.facebook.com/abhint6" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-facebook-square"></i>
-                    </a></span>
-                <span><a href="https://instagram.com/abhint6" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-instagram"></i>
-                    </a></span>
-                <span><a href="https://telegram.me/abhint" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-telegram-plane"></i>
-                    </a></span>
-                <span><a href="https://twitter.com/abhint6" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-twitter"></i>
-                    </a></span>
-                <span><a href="https://github.com/abhint" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i>
-                    </a></span>
-                <span><a href="https://gitlab.com/abhint" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-gitlab"></i>
-                    </a></span>
-                <span><a rel="me" href="https://mastodon.social/@abhint">
-                    <i class="fab fa-mastodon"></i>
-                    </a></span>
-            </div>
-        </div>
-    </div>
-    <!-- Left Container -->
-    <div id="card">
-        <!-- Hello World -->
-        <div id="hello_world">
-            <h1>Hello World!</h1>
-        </div>
-        <div class="terminal">
-            <div class="terminal-bar">Abhijith: ~/Desktop</div>
-            <div class="terminal-body">
-                <span id="typed">Abhijith:~$ </span>
-                <span class="terminal-cursor">|</span>
-            </div>
-        </div>
-    </div>
 </body>
-
 </html>
